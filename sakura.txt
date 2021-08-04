@@ -1,0 +1,177 @@
+docker-compose build
+docker-compose up -d
+winpty docker-compose exec app bash
+composer --version
+composer create-project --prefer-dist "laravel/laravel=6.8.*" app
+
+
+
+rm -rf ./mysql/data/* ; docker-compose up -d
+
+Dockerfileの更新を反映させる
+$ docker-compose up -d --build
+
+cd app
+composer require laravel/ui "1.x" --dev
+php artisan ui vue --auth
+
+php artisan ui bootstrap
+php artisan ui vue
+npm install --save vue-router
+
+npm uninstall --save-dev sass-loader
+npm install --save-dev sass-loader@7.1.0
+npm install && npm run dev
+
+root@f348ab4e7940:/var/www# composer require laravel/ui
+root@f348ab4e7940:/var/www# php artisan ui vue --auth
+root@f348ab4e7940:/var/www# php artisan migrate
+root@f348ab4e7940:/var/www# npm install
+
+
+
+npm i jquery
+npm install bootstrap-table
+npm install @fortawesome/fontawesome-free 
+npm install tableexport.jquery.plugin
+npm i file-saver
+npm install && npm run dev
+
+
+npm install bootstrap
+npm install --save jquery popper.js
+
+
+
+mix.js('resources/js/app.js', 'public/js')
+	.js("resources/js/router.js", "public/js")
+    .sass('resources/sass/app.scss', 'public/css')
+    .autoload({
+        jquery: ['$', 'window.jQuery']
+    });
+
+<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+<script src="{{ asset('/js/app.js') }}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ l
+
+Ctrl + k：行末まで削除
+Ctrl + u：行頭まで削除する
+Ctrl + a	行頭へ移動
+Ctrl + l	画面をクリアする
+
+よく使うターミナルショートカットキー一覧
+矢印キー代替
+Ctrl + b：左方向へ移動
+カーソルの現在位置を左方向へ1文字移動します。
+矢印キーの←と同じです。
+
+Ctrl + f：右方向へ移動
+カーソルの現在位置を右方向へ1文字移動します。
+矢印キーの→と同じです。
+
+Ctrl + p：一つ前の履歴を見る
+一つ前に実行したコマンドの履歴を見ることが出来ます。
+繰り返し実行することで、どんどん前の履歴を見ることが出来ます。
+矢印キーの↑と同じです。
+
+Ctrl + n：一つ後の履歴を見る
+コマンド履歴を見ていて、遡りすぎた！といった時に使います。
+矢印キーの↓と同じです。
+
+Ctrl + a：行頭に移動
+カーソルの現在位置を行頭に移動します。
+長いコマンドで行頭でミスったときに便利です。
+
+Ctrl + e：行末に移動
+カーソルの現在位置を行末に移動します。
+行頭で文字を修正後に行末に戻るときに便利です。
+
+文字列削除
+Ctrl + d：カーソルの文字を削除
+Deleteキーと同じ動きをします。
+
+Ctrl + h：カーソルの一文字前を削除
+backspaceキーと同じ動きをします。設定されていないときもある・・
+
+Ctrl + u：行頭まで削除する
+カーソルの現在位置から行頭までを削除します。
+カーソル位置から左側をまるっと消すならこれでイチコロ。
+
+Ctrl + k：行末まで削除
+カーソルの現在位置から行末までを削除します。
+カーソル位置から右側をまるっと消すならこれでイチコロ。
+
+Ctrl + w：ワード単位で行頭方向の文字列を削除
+カーソルの現在位置からワード単位で文字列を削除します。
+スペースが空いていれば単語とみなすので単語単位で修正したい場合には便利です。
+
+その他便利ワザ
+Ctrl + c：コマンド強制終了
+ターミナルで実行中のコマンドを終了します。
+途中終了させるときはこれを使いましょう！
+
+Ctrl + r：コマンド履歴の検索
+過去に入力したコマンドを探します。
+Crtl + rを入力してから文字列を入力すると、部分一致で候補が表示されます。
+[Enterを押す]：表示されているコマンドを実行
+[Escを押す]コマンドが入力された状況で通常画面に戻る
+
+Ctrl + l：ターミナルのリセット
+ターミナルを一番初めの行からにリセットします。
+コマンド入力が一番下からだと見づらい場合などに便利です。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.17",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^2.0",
+        "lodash": "^4.17.4",
+        "popper.js": "^1.12",
+        "vue": "^2.5.7",
+        "vue-router": "^3.5.2"
+    }
+}
